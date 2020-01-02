@@ -9,9 +9,6 @@ module.exports = {
     '/': {
       lang: 'vi',
     },
-    '/en': {
-      lang: 'en-US',
-    },
   },
 
   evergreen: true,
@@ -55,10 +52,9 @@ module.exports = {
 
     personalInfo: {
       nickname: 'VNodeJS',
-      description: 'Happy Coding<br/>Happy Life',
+      description: 'Dành cả thanh xuân để tìm BUG',
       email: 'VNodeJS.Tech@gmail.com',
       location: 'Hà Nội, Việt Nam',
-      organization: 'NodeJS',
 
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
 
@@ -72,15 +68,15 @@ module.exports = {
           link: 'https://www.facebook.com/devhoangkien',
         },
 
-        medium: {
-          account: 'vnodejs.tech',
-          link: 'https://medium.com/@vnodejs.tech',
-        },
+        // medium: {
+        //   account: 'vnodejs.tech',
+        //   link: 'https://medium.com/@vnodejs.tech',
+        // },
 
-        gitlab: {
-          account: 'devhoangkien',
-          link: 'https://gitlab.com/devhoangkien',
-        },
+        // gitlab: {
+        //   account: 'devhoangkien',
+        //   link: 'https://gitlab.com/devhoangkien',
+        // },
 
       },
     },
@@ -112,6 +108,7 @@ module.exports = {
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
       { text: 'Custom Pages', link: '/custom-pages/', exact: false },
+      { text: 'ThinkJS', link: '/think-js/', exact: false },
       { text: 'Github', link: 'https://github.com/devhoangkien/vnodejs' },
       { text: 'Medium', link: 'https://medium.com/@vnodejs.tech' },
     ],
