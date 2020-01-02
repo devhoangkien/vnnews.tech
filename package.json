@@ -22,11 +22,11 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "build": "vuepress build docs --dest docs-dist",
+    "build": "vuepress build docs --dest public",
     "dev": "vuepress dev docs --no-cache --temp .temp",
     "lint": "eslint --ext .js,.vue lib docs",
     "publish": "git push origin master:master --tags",
-    "serve": "vuepress serve docs --dest docs-dist",
+    "serve": "vuepress serve docs --dest public",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1 && git add CHANGELOG.md"
   },
   "husky": {

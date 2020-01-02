@@ -1,12 +1,15 @@
 const path = require('path')
 
 module.exports = {
-  title: 'vuepress-theme-meteorlxy',
+  title: 'VNodeJS.Tech',
 
-  description: 'Vuepress theme of meteorlxy\'s blog',
+  description: 'VNodeJS.Tech lập trình nodejs',
 
   locales: {
     '/': {
+      lang: 'vi',
+    },
+    '/en': {
       lang: 'en-US',
     },
   },
@@ -16,6 +19,11 @@ module.exports = {
   plugins: [
     ['@vuepress/google-analytics', {
       ga: 'UA-132770851-2',
+    }],
+    ['@limdongjin/vuepress-plugin-simple-seo', {
+      default_image: '/images/nodejs.png',
+      root_url: 'https://vnodejs.tech',
+      default_site_name: 'Blog lập trình NodeJS',
     }],
   ],
 
@@ -43,78 +51,37 @@ module.exports = {
   theme: path.resolve(__dirname, '../../lib'),
 
   themeConfig: {
-    lang: 'en-US',
+    lang: 'vi',
 
     personalInfo: {
-      nickname: 'meteorlxy',
+      nickname: 'VNodeJS',
       description: 'Happy Coding<br/>Happy Life',
-      email: 'meteor.lxy@foxmail.com',
-      location: 'Shenzhen, China',
-      organization: 'Tencent',
+      email: 'VNodeJS.Tech@gmail.com',
+      location: 'Hà Nội, Việt Nam',
+      organization: 'NodeJS',
 
       avatar: 'https://www.meteorlxy.cn/assets/img/avatar.jpg',
 
       sns: {
         github: {
           account: 'meteorlxy',
-          link: 'https://github.com/meteorlxy',
+          link: 'https://github.com/devhoangkien/vnodejs',
         },
         facebook: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.facebook.com/meteorlxy.cn',
-        },
-        linkedin: {
-          account: 'meteorlxy',
-          link: 'http://www.linkedin.com/in/meteorlxy',
-        },
-        twitter: {
-          account: 'meteorlxy_cn',
-          link: 'https://twitter.com/meteorlxy_cn',
-        },
-        weibo: {
-          account: '@焦炭君_Meteor',
-          link: 'https://weibo.com/u/2039655434',
-        },
-        zhihu: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.zhihu.com/people/meteorlxy.cn',
-        },
-        douban: {
-          account: '159342708',
-          link: 'https://www.douban.com/people/159342708',
-        },
-        reddit: {
-          account: 'meteorlxy',
-          link: 'https://www.reddit.com/user/meteorlxy',
-        },
-        medium: {
-          account: 'meteorlxy.cn',
-          link: 'https://medium.com/@meteorlxy.cn',
-        },
-        instagram: {
-          account: 'meteorlxy.cn',
-          link: 'https://www.instagram.com/meteorlxy.cn',
-        },
-        gitlab: {
-          account: 'meteorlxy',
-          link: 'https://gitlab.com/meteorlxy',
-        },
-        bitbucket: {
-          account: 'meteorlxy',
-          link: 'https://bitbucket.org/meteorlxy',
-        },
-        docker: {
-          account: 'meteorlxy',
-          link: 'https://hub.docker.com/u/meteorlxy',
-        },
-        csdn: {
           account: '',
-          link: 'https://www.csdn.net/',
+          link: 'https://www.facebook.com/devhoangkien',
         },
-        juejin: {
-          account: 'meteorlxy',
-          link: 'https://juejin.im/user/5c6fa9dde51d453fcb7baf09',
+
+        medium: {
+          account: 'vnodejs.tech',
+          link: 'https://medium.com/@vnodejs.tech',
         },
+
+        gitlab: {
+          account: 'devhoangkien',
+          link: 'https://gitlab.com/devhoangkien',
+        },
+
       },
     },
 
@@ -129,7 +96,7 @@ module.exports = {
     footer: {
       poweredBy: true,
       poweredByTheme: true,
-      custom: 'Copyright 2018-present <a href="https://github.com/meteorlxy" target="_blank">meteorlxy</a> | MIT License',
+      custom: 'Copyright 2020 <a href="https://github.com/devhoangkien/vnodejs" target="_blank">VNodeJS.Tech</a>',
     },
 
     infoCard: {
@@ -145,20 +112,24 @@ module.exports = {
       { text: 'Home', link: '/', exact: true },
       { text: 'Posts', link: '/posts/', exact: false },
       { text: 'Custom Pages', link: '/custom-pages/', exact: false },
-      { text: 'Changelog', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy/blob/master/CHANGELOG.md' },
-      { text: 'Github', link: 'https://github.com/meteorlxy/vuepress-theme-meteorlxy' },
+      { text: 'Github', link: 'https://github.com/devhoangkien/vnodejs' },
+      { text: 'Medium', link: 'https://medium.com/@vnodejs.tech' },
     ],
 
     comments: {
-      owner: 'meteorlxy',
-      repo: 'vuepress-theme-meteorlxy',
-      clientId: 'cbda894952ba70c00666',
-      clientSecret: '1ade785ca693bf3092be5e5338720d5ee43672b7',
-      autoCreateIssue: false,
+      platform: 'github',
+      owner: 'devhoangkien',
+      repo: 'vnode',
+      clientId: '6000395549ef64ad69b7',
+      clientSecret: '544fa95476ed29319ee24802954826c6c41b5e5e',
+      // autoCreateIssue: true,
+      autoCreateIssue: process.env.NODE_ENV !== 'development',
+
     },
 
     pagination: {
       perPage: 5,
     },
+
   },
 }

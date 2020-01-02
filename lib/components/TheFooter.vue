@@ -25,22 +25,12 @@
       <span>Powered by </span>
 
       <a
-        href="https://github.com/vuejs/vuepress"
+        href="https://github.com/devhoangkien"
         target="_blank"
       >
-        VuePress
+        Devhoangkien
       </a>
 
-      <template v-if="poweredByTheme">
-        <span> | </span>
-
-        <a
-          href="https://github.com/meteorlxy/vuepress-theme-meteorlxy"
-          target="_blank"
-        >
-          meteorlxy
-        </a>
-      </template>
     </p>
 
     <!-- eslint-disable vue/no-v-html -->
